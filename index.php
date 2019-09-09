@@ -1,6 +1,6 @@
 <html>
 <body>
-    <form action="file_create.php" method="POST">
+    <form action="form_process.php" method="POST">
             <label for="client-code">Client code</label>
             <input id="client-code" name="client-code" type="number" required>
             <label for="file-name">File name</label>

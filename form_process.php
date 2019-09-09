@@ -1,4 +1,8 @@
 <?php
+
+require_once 'file.php';
+require_once 'directory.php';
+
 $clientcode = $_POST['client-code'];
 $filename = $_POST['file-name'];
 $text = $_POST['text'];
@@ -12,6 +16,9 @@ if(!is_dir(dirname(__FILE__)."/users")){
 }
 
 
+$direcory = new CreateDirectory();
+$direcory->create();
+
 
 if(is_dir($dir))
 {
@@ -22,7 +29,7 @@ if(is_dir($dir))
 else {
     if(mkdir($dir,0777))
     {
-        $my_file = fopen($filedir,"w"); //open file to write
+        $my_file = fopen($filedir,"w");
         fwrite($my_file, $text . PHP_EOL);
         fclose($my_file);
     } else
