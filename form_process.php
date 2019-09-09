@@ -16,26 +16,8 @@ if(!is_dir(dirname(__FILE__)."/users")){
 }
 
 
-$direcory = new CreateDirectory();
+$direcory = new CreateDirectory($clientcode , $filename , $text);
 $direcory->create();
 
 
-if(is_dir($dir))
-{
-    $my_file = fopen($filedir,"w");
-    fwrite($my_file, $text . PHP_EOL);
-    fclose($my_file);
-}
-else {
-    if(mkdir($dir,0777))
-    {
-        $my_file = fopen($filedir,"w");
-        fwrite($my_file, $text . PHP_EOL);
-        fclose($my_file);
-    } else
-    {
-        $my_file = fopen($filedir,"w"); //open file to write
-        fwrite($my_file, $text . PHP_EOL);
-        fclose($my_file);
-    }
-}
+
