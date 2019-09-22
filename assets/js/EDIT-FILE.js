@@ -18,7 +18,4 @@ function viewfile(dir, filename) {
     }).fail(function(jqXHR, textStatus) {
         alert("Houve um erro!");
     })
-
-
-
 }

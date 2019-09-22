@@ -5,18 +5,25 @@
     <script src="assets/js/AJAX-FORM-SUBMIT.js"></script>
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
 </head>
+
 <body>
+<div class="menu-bar">
+        <div class="menu-itens">
+        <a class="menu-iten" href="index.php">Cadastrar</a>
+        <a class="menu-iten" href="file_list.php">Listar</a>
+        </div>
+    </div>
     <div class="form-new">
         <form method="POST">
             <label for="client-code">Client code</label>
             <input id="client-code" class="input-form" name="client-code" type="number" required>
-            <br/>
+            <br />
             <label for="file-name">File name</label>
             <input id="file-name" class="input-form" name="file-name" maxlength="15" type="text" required>
-            <br/>
+            <br />
             <label for="text">Text</label>
             <textarea id="text" class="input-form" name="text" required></textarea>
-            <br/>
+            <br />
             <button type="submit" class="submit-button" onclick="submitform();">Submit</button>
         </form>
     </div>
