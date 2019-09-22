@@ -5,6 +5,8 @@
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+     <script src='.\assets\js\DELETE-FILE.js'></script>
+     <script src='.\assets\js\VIEW-FILE.js'></script>
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
 </head>
 
@@ -14,38 +16,36 @@
             <tr>
                 <th>Codigo</th>
                 <th>Arqivos</th>
-                <th>Acoes<th>
             </tr>
 
             <?php
-            $files = new Files();
-            $list = $files->getDirs();
+                $files = new Files();
+                $list = $files->getDirs();
 
-            foreach ($list as $line) {
-                if ($line == ".." || $line == ".") continue;
-                print '<tr>';
-                print '<td>' . $line . PHP_EOL . '</td>';
-                print "<td>";
-                print "<table class='tableintable'>";
+                foreach ($list as $line) {
+                    if ($line == ".." || $line == ".") continue;
+                    print '<tr>';
+                    print '<td>' . $line . PHP_EOL . '</td>';
+                    print "<td>";
+                    print "<table class='tableintable'>";
 
-                $filesfromdir = $files->getFiles($line);
+                    $filesfromdir = $files->getFiles($line);
 
-                foreach ($filesfromdir as $file) {
-                    if ($file == ".." || $file == ".") continue;
-                    print '<tr><td>' . $file . PHP_EOL; 
-                    print '</td><td>';
-                    print "<button class='trash-button'><i class='far fa-trash-alt'></i></button>";
-                    print '</td></tr>';
+                    foreach ($filesfromdir as $file) {
+                        if ($file == ".." || $file == ".") continue;
+                        print '<tr><td>' . $file . PHP_EOL; 
+                        print '</td><td>';
+                        print "<button class='view-button' onclick=viewfile('". $line ."','" .$file. "');><i class='fas fa-eye'></i></button>";
+                        print "<button class='trash-button' onclick=deletefile('". $line ."','" .$file. "');><i class='far fa-trash-alt'></i></button>";
+                        print '</td></tr>';
+                    }
+
+                    print "</table>";
+                    print "</td>";
+                    print "</td>";
+                    print '</tr>';
+                    
                 }
-
-                print "</table>";
-                print "</td>";
-                print "<td>";
-                print "<button class='trash-button'><i class='far fa-trash-alt'></i></button>";
-                print "</td>";
-                print '</tr>';
-                
-            }
 
             ?>
         </table>
