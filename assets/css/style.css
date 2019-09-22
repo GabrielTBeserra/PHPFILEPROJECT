@@ -1,5 +1,65 @@
 .form-new {
-    position: relative;
-    width: 50%;
-    background-color: red;
+    margin-left: 15%;
+    margin-right: 15%;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 45px;
+}
+
+.input-form {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.submit-button {
+    width: 35%;
+    background-color: #4f4fff;
+    color: white;
+    padding: 14px 9px;
+    margin: 8px 0;
+    border: none;
+    float: left;
+    cursor: pointer;
+}
+
+.file-list {
+    border-collapse: collapse;
+    border: 1px solid black;
+    background-color: white;
+}
+
+.file-list tr {
+    border-top: 1px solid black;
+}
+
+.file-list td {
+    border: 1px solid black;
+}
+
+.tableintable {
+    border-collapse: collapse;
+}
+
+.tableintable td {
+    border: none;
+}
+
+.tableintable tr {
+    border: none;
+}
+
+.trash-button {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    float: right;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
 }

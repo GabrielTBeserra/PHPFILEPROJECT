@@ -5,7 +5,7 @@ function submitform() {
 
 
     $.ajax({
-        url: "form_process.php",
+        url: "class/form_process.php",
         type: "POST",
         data: {
             clientcode: clientcode,
@@ -14,11 +14,9 @@ function submitform() {
         },
         dataType: "html"
     }).done(function(resposta) {
-        console.log(resposta);
+        alert("Arquivo criado com sucesso!");
     }).fail(function(jqXHR, textStatus) {
-        console.log("Requisicao falhou: " + textStatus);
-    }).always(function() {
-        console.log("Enviado com sucesso!!");
-    });
+        alert("Houve um erro!");
+    })
 
 }
