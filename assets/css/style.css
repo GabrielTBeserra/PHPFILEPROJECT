@@ -27,6 +27,18 @@
     cursor: pointer;
 }
 
+.edit-button {
+    width: 100%;
+    background-color: #4f4fff;
+    color: white;
+    padding: 14px 9px;
+    margin: 8px 0;
+    border: none;
+    float: left;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
 .file-list {
     width: 100%;
     display: inline-block;
@@ -147,4 +159,25 @@
 .menu-itens a {
     margin: 15px;
     text-decoration: none;
+}
+
+.modal-header {
+    width: 15%;
+}
+
+.modal-header {
+    float: right;
+    padding-right: 18%;
+}
+
+.close-button {
+    width: 35%;
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 5px;
+    margin: 8px 0;
+    border: none;
+    float: left;
+    cursor: pointer;
 }

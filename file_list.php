@@ -1,25 +1,12 @@
 <?php require_once 'class/filelist.php'; ?>
 
 <html>
-
 <head>
-    <script>
-        function closeModal(a , b) {
-            $('#modalwindow').hide();
-            var modalWindow = document.getElementById('iframeModalWindow');
-            modalWindow.src = "";
-        }
-        function teste(a , b) {
-            $('#modalwindow').show();
-            var modalWindow = document.getElementById('iframeModalWindow');
-
-            modalWindow.src = "edit.php?dir=" + a + "&filename=" + b;
-}
-    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <script src='.\assets\js\DELETE-FILE.js'></script>
     <script src='.\assets\js\EDIT-FILE.js'></script>
+    <script src='.\assets\js\modal-control.js'></script>
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
 </head>
 

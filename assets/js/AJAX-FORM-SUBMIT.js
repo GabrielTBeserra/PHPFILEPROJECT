@@ -3,7 +3,6 @@ function submitform() {
     let filename = document.getElementById('file-name').value;
     let text = document.getElementById('text').value;
 
-
     $.ajax({
         url: "class/form_process.php",
         type: "POST",
