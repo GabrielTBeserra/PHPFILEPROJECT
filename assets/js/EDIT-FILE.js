@@ -3,6 +3,8 @@ function viewfile(dir, filename) {
     console.log(dir);
     console.log(filename);
 
+    let link = location.href = "edit.php?dir=" + dir + "&filename=" + filename + "";
+    let url = link.replace(" ", "%20");
     $.ajax({
         async: false,
         url: "edit.php",
@@ -14,7 +16,8 @@ function viewfile(dir, filename) {
         dataType: "html"
     }).done(function(resposta) {
         console.log(resposta);
-        location.href = "edit.php?dir=" + dir + "&filename=" + filename + "";
+
+
     }).fail(function(jqXHR, textStatus) {
         alert("Houve um erro!");
     })

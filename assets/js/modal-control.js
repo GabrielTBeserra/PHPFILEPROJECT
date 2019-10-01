@@ -1,11 +1,14 @@
 function closeModal(a, b) {
-    $('#modalwindow').hide();
+    $('#myModal').hide();
     var modalWindow = document.getElementById('iframeModalWindow');
     modalWindow.src = "";
 }
 
-function teste(a, b) {
-    $('#modalwindow').show();
+function openmodal(a, b) {
+    console.log(a);
+    console.log(b);
+
+    $('#myModal').show();
     var modalWindow = document.getElementById('iframeModalWindow');
 
     modalWindow.src = "edit.php?dir=" + a + "&filename=" + b;

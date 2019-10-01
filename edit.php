@@ -15,6 +15,7 @@
 </head>
 
 <body>
+    <section>
     <div class="form-new">
         <form method="POST">
             <label for="client-code">Client code</label>
@@ -29,6 +30,7 @@
             <button type="submit" class="edit-button" onclick="submitform();">Salvar</button>
         </form>
     </div>
+    </section>
 </body>
 
 </html>

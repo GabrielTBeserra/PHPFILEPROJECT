@@ -3,6 +3,17 @@ function submitform() {
     let filename = document.getElementById('file-name').value;
     let text = document.getElementById('text').value;
 
+    console.log(clientcode);
+    console.log(filename);
+    console.log(text);
+
+    if (clientcode.trim() === "" || filename.trim() === "" || text.trim() === "") {
+        alert("Preencha todos os campos!");
+        return;
+    }
+
+    alert("Arquivo criado com sucesso!");
+
     $.ajax({
         url: "class/form_process.php",
         type: "POST",
@@ -12,8 +23,6 @@ function submitform() {
             text: text
         },
         dataType: "html"
-    }).done(function(resposta) {
-        alert("Arquivo criado com sucesso!");
     }).fail(function(jqXHR, textStatus) {
         alert("Houve um erro!");
     })

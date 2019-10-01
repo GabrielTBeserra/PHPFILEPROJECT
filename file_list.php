@@ -17,7 +17,7 @@
         <a class="menu-iten" href="file_list.php">Listar</a>
         </div>
     </div>
-
+    <section>
     <div class="form-new">
         <table class="file-list">
             <tr>
@@ -42,9 +42,8 @@
                     if ($file == ".." || $file == ".") continue;
                     print '<tr><td>' . $file . PHP_EOL;
                     print '</td><td>';
-                    //print "<button class='view-button' onclick=viewfile('" . $line . "','" . $file . "');><i class='fas fa-pencil'></i></button>";
-                    print "<button class='view-button' onclick=teste('" . $line . "','" . $file . "');><i class='fa fa-eye'></i></button>";
-                    print "<button class='trash-button' onclick=deletefile('" . $line . "','" . $file . "');><i class='far fa-trash-alt'></i></button>";
+                    print "<button class='view-button' onclick=openmodal('" . urlencode($line) . "','" . urlencode($file) . "');><i class='fa fa-eye'></i></button>";
+                    print "<button class='trash-button' onclick=deletefile('" . urlencode($line) . "','" . urlencode($file) . "');><i class='far fa-trash-alt'></i></button>";
                     print '</td></tr>';
                 }
 
@@ -56,13 +55,15 @@
 
             ?>
         </table>
-        <div id="modalwindow" class="modal">
-            <div class="modal-header">
-                <button type="button" class="close-button" onclick=closeModal()>&times;</button>
+        
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick=closeModal()>&times;</span>
+                <iframe scrolling="no" id="iframeModalWindow" height="100%" width="100%" src="" class="iframestyle" name="iframe_modal"></iframe>
             </div>
-            <iframe id="iframeModalWindow" height="80%" width="80%" src="" class="iframestyle" name="iframe_modal"></iframe>
         </div>
     </div>
+    </section>
 </body>
 
 </html>
