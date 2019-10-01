@@ -5,8 +5,6 @@ function closeModal(a, b) {
 }
 
 function openmodal(a, b) {
-
-
     $('#editModal').show();
     var modalWindow = document.getElementById('srcModal');
 
