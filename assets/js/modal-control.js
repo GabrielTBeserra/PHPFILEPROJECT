@@ -1,15 +1,14 @@
 function closeModal(a, b) {
-    $('#myModal').hide();
-    var modalWindow = document.getElementById('iframeModalWindow');
+    $('#editModal').hide();
+    var modalWindow = document.getElementById('srcModal');
     modalWindow.src = "";
 }
 
 function openmodal(a, b) {
-    console.log(a);
-    console.log(b);
 
-    $('#myModal').show();
-    var modalWindow = document.getElementById('iframeModalWindow');
+
+    $('#editModal').show();
+    var modalWindow = document.getElementById('srcModal');
 
     modalWindow.src = "edit.php?dir=" + a + "&filename=" + b;
 }

@@ -86,6 +86,8 @@ form .submit-button {
 }
 
 .file-list {
+    clear: both;
+    margin: 50px;
     width: 100%;
     display: inline-block;
     border: 1px solid #ccc;
@@ -114,30 +116,10 @@ form .submit-button {
 }
 
 .tableintable td {
-    border-right: 1px solid black;
     border: none;
 }
 
-.tableintable tr {
-    border: none;
-}
-
-.tableintable th {
-    border-right: 1px solid black;
-}
-
-.trash-button {
-    background: none;
-    color: inherit;
-    border: none;
-    padding: 5px;
-    float: right;
-    font: inherit;
-    cursor: pointer;
-    outline: inherit;
-}
-
-.view-button {
+.actionbutton {
     background: none;
     color: inherit;
     border: none;

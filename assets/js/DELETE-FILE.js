@@ -6,9 +6,6 @@ function deletefile(dir, file) {
 
     if (!conf) return;
 
-    console.log(dir);
-    console.log(filename);
-
     $.ajax({
         url: "class/deletefile.php",
         type: "POST",

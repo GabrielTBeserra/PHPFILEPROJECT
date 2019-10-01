@@ -41,10 +41,10 @@
                 foreach ($filesfromdir as $file) {
                     if ($file == ".." || $file == ".") continue;
                     print '<tr><td>' . $file . PHP_EOL;
-                    print '</td><td>';
-                    print "<button class='view-button' onclick=openmodal('" . rawurlencode($line) . "','" . rawurlencode($file) . "');><i class='fa fa-eye'></i></button>";
-                    print "<button class='trash-button' onclick=deletefile('" . rawurlencode($line) . "','" . rawurlencode($file) . "');><i class='far fa-trash-alt'></i></button>";
-                    print '</td></tr>';
+                    print '</td><td><div>';
+                    print "<button class='actionbutton' onclick=openmodal('" . rawurlencode($line) . "','" . rawurlencode($file) . "');><i class='fa fa-eye'></i></button>";
+                    print "<button class='actionbutton' onclick=deletefile('" . rawurlencode($line) . "','" . rawurlencode($file) . "');><i class='far fa-trash-alt'></i></button>";
+                    print '</div></td></tr>';
                 }
 
                 print "</table>";
@@ -56,10 +56,10 @@
             ?>
         </table>
         
-        <div id="myModal" class="modal">
+        <div id="editModal" class="modal">
             <div class="modal-content">
                 <span class="close" onclick=closeModal()>&times;</span>
-                <iframe scrolling="no" id="iframeModalWindow" height="100%" width="100%" src="" class="iframestyle" name="iframe_modal"></iframe>
+                <iframe scrolling="no" id="srcModal" height="100%" width="100%" src="" name="edit-modal"></iframe>
             </div>
         </div>
     </div>
