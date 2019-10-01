@@ -9,6 +9,7 @@ function submitform() {
         return;
     }
 
+
     alert("Arquivo criado com sucesso!");
 
     $.ajax({
