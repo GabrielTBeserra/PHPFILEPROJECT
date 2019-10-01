@@ -42,8 +42,8 @@
                     if ($file == ".." || $file == ".") continue;
                     print '<tr><td>' . $file . PHP_EOL;
                     print '</td><td>';
-                    print "<button class='view-button' onclick=openmodal('" . urlencode($line) . "','" . urlencode($file) . "');><i class='fa fa-eye'></i></button>";
-                    print "<button class='trash-button' onclick=deletefile('" . urlencode($line) . "','" . urlencode($file) . "');><i class='far fa-trash-alt'></i></button>";
+                    print "<button class='view-button' onclick=openmodal('" . rawurlencode($line) . "','" . rawurlencode($file) . "');><i class='fa fa-eye'></i></button>";
+                    print "<button class='trash-button' onclick=deletefile('" . rawurlencode($line) . "','" . rawurlencode($file) . "');><i class='far fa-trash-alt'></i></button>";
                     print '</td></tr>';
                 }
 

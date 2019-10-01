@@ -1,5 +1,5 @@
-function deletefile(dir, filename) {
-
+function deletefile(dir, file) {
+    let filename = decodeURIComponent(file);
 
 
     let conf = confirm("Deseja realmente apagar ?");

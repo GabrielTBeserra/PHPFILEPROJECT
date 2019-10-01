@@ -18,9 +18,9 @@ function submitform() {
         url: "class/form_process.php",
         type: "POST",
         data: {
-            clientcode: clientcode,
-            filename: filename,
-            text: text
+            clientcode: clientcode.trim(),
+            filename: filename.trim(),
+            text: text.trim()
         },
         dataType: "html"
     }).fail(function(jqXHR, textStatus) {

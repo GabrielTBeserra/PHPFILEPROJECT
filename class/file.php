@@ -12,7 +12,7 @@ class File {
 
     public function create(){
         $this->file = fopen($this->filedir,"w");
-        fwrite($this->file, $this->text . PHP_EOL);
+        fwrite($this->file, $this->text);
         fclose($this->file);
     }
 }
